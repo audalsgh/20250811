@@ -83,4 +83,7 @@ print(result)
 - 충돌 위험 영역/오브젝트 카운트 등 ADAS 지표들도 동일한 기준으로 출력됨.
 
 -> TensorRT는 실차/엣지에서 추론 전용으로 최적화하는데 쓰임, 모델이 FP16/INT8로 변환되어 FPS↑, 지연↓, 메모리↓
-  
+
+<img width="1728" height="589" alt="image" src="https://github.com/user-attachments/assets/1b9f5853-87cb-4d72-acb5-3243f1065bc4" /><br>
+gpt에게 원래 논리에 부합하는 코랩용 비교코드를 달라고함. 원본코드는 너무 오래걸려서 나중에 해볼것.
+

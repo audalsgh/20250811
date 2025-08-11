@@ -1,6 +1,5 @@
 # 3일간 Roboflow 차선인식 프로젝트 진행예정
 [Roboflow 프로젝트 계획](https://docs.google.com/document/d/1rxQHvxAIZM0pTspVIDAUx2ZEmjZRNSW-f6OrcitXFqM/edit?tab=t.0)<br>
-[ADAS에서 텐서RT와 파이토치를 비교하는 코드모음](https://docs.google.com/document/d/179l9DqTYZJ1oGDWNA-TGtFZjs1PprWVoVlV-dTw_XrM/edit?tab=t.0)<br>
 추후에 사용할 ai studio 가입하기
 
 ## 1. YOLOv11 segmentation 사물인식 코드 colab에서 실습
@@ -73,5 +72,5 @@ print(result)
 ```
 
 ## 4. ADAS는 무엇이고, 텐서RT와 파이토치를 왜 비교할까?
-
+[ADAS에서 텐서RT와 파이토치를 비교하는 코드모음](https://docs.google.com/document/d/179l9DqTYZJ1oGDWNA-TGtFZjs1PprWVoVlV-dTw_XrM/edit?tab=t.0)<br>
 

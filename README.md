@@ -75,10 +75,11 @@ print(result)
 [텐서RT와 파이토치를 비교하는 ADAS 코드](https://docs.google.com/document/d/179l9DqTYZJ1oGDWNA-TGtFZjs1PprWVoVlV-dTw_XrM/edit?tab=t.0)<br>
 (ADAS 코드는 런파드에서 실행해볼 예정. 코랩에선 충돌이 많이 생기기때문.)
 
-**ADAS 모델을 만드는 단계에서 PyTorch가 쓰이고, 만든 모델을 차량에 넣어서 실시간으로 빠르게 돌리는 단계에서는 TensorRT가 쓰임.**
+**ADAS 모델을 만들때 PyTorch가 쓰이고, 만든 모델을 실제 차량에 넣어서 실시간으로 돌리는 단계에선 TensorRT가 쓰이는것!**
 - 동일 파이프라인 유지 : 전처리, 입력 크기(imgsz=640, conf·NMS) 기준이 동일한 이미지 세트(1/2/3.jpg), conf=0.5로 맞춰서 공정한 비교를 하는중.
 - FPS 측정 방식 : 20회 반복 + 3회 워밍업 + torch.cuda.synchronize()로 측정중.
 - 시각화/ADAS 로직 : 차선 검출은 두 경로(Pytorch, TRT)에서 동일하게 적용되어 결과 비교 가능.
 - 충돌 위험 영역/오브젝트 카운트 등 ADAS 지표들도 동일한 기준으로 출력됨.
+
 -> TensorRT는 실차/엣지에서 추론 전용으로 최적화하는데 쓰임, 모델이 FP16/INT8로 변환되어 FPS↑, 지연↓, 메모리↓
   

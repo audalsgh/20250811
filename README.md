@@ -1,70 +1,11 @@
-# 3일간 Roboflow 차선인식 프로젝트 진행 
+# 3일간 Roboflow 차선인식 프로젝트 진행예정
+[Roboflow 프로젝트 계획](https://docs.google.com/document/d/1rxQHvxAIZM0pTspVIDAUx2ZEmjZRNSW-f6OrcitXFqM/edit?tab=t.0)<br>
+[텐서RT와 파이토치 비교 코드모음](https://docs.google.com/document/d/179l9DqTYZJ1oGDWNA-TGtFZjs1PprWVoVlV-dTw_XrM/edit?tab=t.0)
 
 ## SegFormer 모델은 런파드에서 실습해볼것.
 1. YOLOv11 segmentation 사물인식 19개정도를 ai studio에 물어봐서 colab에서 실행하기.
-```
-# 3. 라이브러리 임포트 및 모델 로드
-import torch
-import cv2
-import time
-from ultralytics import YOLO
-
-# GPU 사용 가능 여부 확인 및 장치 설정
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
-print(f"사용 장치: {device}")
-
-# YOLO 분할 모델 로드
-# --- 여기를 수정했습니다! ---
-# 'YOLO11x-seg.pt'를 실제 파일 이름인 'yolo11x-seg.pt' (소문자)로 변경했습니다.
-model = YOLO('yolo11x-seg.pt').to(device)
-
-# 4. 비디오 추론 및 결과 파일로 저장
-
-# 입력 비디오 열기
-video_path = "driving_video.mp4"
-cap = cv2.VideoCapture(video_path)
-
-# 출력 비디오 설정
-width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-fps_in = cap.get(cv2.CAP_PROP_FPS)
-# 결과 파일 이름을 바꿔서 이전 결과와 헷갈리지 않도록 합니다.
-output_path = "driving_video_result_yolo11.mp4"
-fourcc = cv2.VideoWriter_fourcc(*'mp4v') # 코덱 설정
-out = cv2.VideoWriter(output_path, fourcc, fps_in, (width, height))
-
-# 진행 상황을 알리는 메시지
-total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-print(f"총 {total_frames} 프레임의 영상 처리를 시작합니다. 완료 후 '{output_path}' 파일이 생성됩니다.")
-
-# 프레임 처리 루프
-frame_count = 0
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        break
-
-    # 모델 추론 실행
-    results = model.predict(frame, device=device, verbose=False)
-
-    # 결과(분할 마스크, 경계 상자 등)를 프레임에 그리기
-    annotated_frame = results[0].plot()
-
-    # 처리된 프레임을 비디오 파일에 쓰기
-    out.write(annotated_frame)
-    
-    frame_count += 1
-    if frame_count % 100 == 0: # 100 프레임마다 진행 상황 출력
-        print(f"{frame_count} / {total_frames} 프레임 처리 중...")
-
-# 완료 메시지 출력
-print(f"영상 처리가 완료되었습니다. 결과는 {output_path} 파일로 저장되었습니다.")
-
-# 자원 해제
-cap.release()
-out.release()
-cv2.destroyAllWindows()
-```
+<img width="2404" height="1080" alt="image" src="https://github.com/user-attachments/assets/3ac1df3b-cefc-4ee8-93b9-8600d73b37fe" /><br>
+-> 차선같은거 보단 사물인식을 목표로 함.
 
 2. 허깅페이스 코드는 런파드.
 ```

@@ -239,8 +239,8 @@ print("1. 한 프레임 테스트:")
 print("test_single_frame('/content/2.mp4')")
 print("\n2. 전체 비디오 처리:")
 print("#process_video_all_objects('/content/2.mp4', '/content/2_all_objects.mp4')")
-```
 
 # 실행
 #test_single_frame('/content/1.mp4')  # 먼저 테스트
-process_video_all_objects('/content/2.mp4', '/content/2_all_objects.mp4')  # 전체 처리``
+process_video_all_objects('/content/2.mp4', '/content/2_all_objects.mp4')  # 전체 처리
+```

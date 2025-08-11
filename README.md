@@ -55,6 +55,21 @@ SegFormer 모델은 런파드에서 실습해볼것.
 - 멀티프레임워크 지원: PyTorch, TensorFlow, JAX
 - NLP, CV(컴퓨터 비전), ASR(음성 인식) 등 다양한 도메인을 가짐.
 
+허깅페이스에서 다운받은 BERT모델로 문장을 분류하는 간단한 예제
+```python
+from transformers import pipeline
+
+# 감정 분석 파이프라인 불러오기
+classifier = pipeline("sentiment-analysis")
+
+# 예측
+result = classifier("I love Hugging Face!")
+print(result)
+
+# 출력결과
+[{'label': 'POSITIVE', 'score': 0.9998}]
+```
+
 ```
 import torch
 import cv2

@@ -3,7 +3,7 @@
 [텐서RT와 파이토치 비교 코드모음](https://docs.google.com/document/d/179l9DqTYZJ1oGDWNA-TGtFZjs1PprWVoVlV-dTw_XrM/edit?tab=t.0)
 
 ## SegFormer 모델은 런파드에서 실습해볼것.
-1. YOLOv11 segmentation 사물인식 19개정도를 ai studio에 물어봐서 colab에서 실행하기.
+1. YOLOv11 segmentation 사물인식 19개정도를 ai studio에 물어봐서 colab에서 실행하기.<br>
 [코랩에서 실행한 코드](0811_YOLOv11_Segmentation.ipynb)
 <img width="2404" height="1080" alt="image" src="https://github.com/user-attachments/assets/3ac1df3b-cefc-4ee8-93b9-8600d73b37fe" /><br>
 -> 차선같은거 보단 사물인식을 목표로 함.

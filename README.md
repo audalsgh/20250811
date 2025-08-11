@@ -72,5 +72,5 @@ print(result)
 ```
 
 ## 4. ADAS는 무엇이고, 텐서RT와 파이토치를 왜 비교할까?
-[ADAS에서 텐서RT와 파이토치를 비교하는 코드모음](https://docs.google.com/document/d/179l9DqTYZJ1oGDWNA-TGtFZjs1PprWVoVlV-dTw_XrM/edit?tab=t.0)<br>
+[텐서RT와 파이토치를 비교하는 ADAS 코드모음](https://docs.google.com/document/d/179l9DqTYZJ1oGDWNA-TGtFZjs1PprWVoVlV-dTw_XrM/edit?tab=t.0)<br>
 

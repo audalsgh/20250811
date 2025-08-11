@@ -73,7 +73,7 @@ print(result)
 
 ## 4. ADAS는 무엇이고, 텐서RT와 파이토치를 왜 비교할까?
 [텐서RT와 파이토치를 비교하는 ADAS 코드](https://docs.google.com/document/d/179l9DqTYZJ1oGDWNA-TGtFZjs1PprWVoVlV-dTw_XrM/edit?tab=t.0)<br>
-(ADAS 코드는 런파드에서 실행해볼 예정. 코랩에선 충돌이 많이 생기기때문.)
+(ADAS 코드는 코랩에선 충돌이 많이 생기기때문에 런파드에서 하는게 좋지만, 주피터랩과 Connect문제로 그냥 코랩에서 진행)
 
 **ADAS 모델을 만들때 PyTorch가 쓰이고, 만든 모델을 실제 차량에 넣어서 실시간으로 돌리는 단계에선 TensorRT가 쓰이는것!**
 - 동일 파이프라인 유지 : 전처리, 입력 크기(imgsz=640, conf·NMS) 기준이 동일한 이미지 세트(1/2/3.jpg), conf=0.5로 맞춰서 공정한 비교를 하는중.

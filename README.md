@@ -66,7 +66,7 @@ classifier = pipeline("sentiment-analysis")
 result = classifier("I love Hugging Face!")
 print(result)
 
-# 출력결과
+# 출력결과는 문장의 문맥을 파악하여 긍정의 범주에 99% 속한다고 나옴!
 [{'label': 'POSITIVE', 'score': 0.9998}]
 ```
 

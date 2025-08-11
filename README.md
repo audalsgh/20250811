@@ -9,8 +9,52 @@
 <img width="2404" height="1080" alt="image" src="https://github.com/user-attachments/assets/3ac1df3b-cefc-4ee8-93b9-8600d73b37fe" /><br>
 -> 차선같은거 보단 사물인식을 목표로 함.
 
-## 2. 허깅페이스 코드는 런파드.
-- SegFormer 모델은 런파드에서 실습해볼것.
+## 2. SegFormer 모델이란?
+SegFormer 모델은 런파드에서 실습해볼것.
+- NVIDIA에서 제안한 Transformer 기반의 세그멘테이션(Segmentation) 모델
+- 기존모델은 CNN(Convolutional Neural Network)을 백본으로 사용했지만, SegFormer는 Efficient Self-Attention 기반의 Transformer Encoder를 사용
+- Hierarchical Transformer Encoder : 여러 해상도의 피처맵을 생성해 다단계(Context + Detail) 정보를 통합.
+- 다양한 입력 크기와 해상도에서 강한 성능
+  - Cityscapes, ADE20K 같은 고해상도 데이터셋에서 좋은 성능을 보임.
+  - 모바일/엣지 디바이스에도 적용 가능할 정도로 경량화 가능.
+- Lightweight MLP Decoder : 복잡한 디코더 대신 단순한 MLP(Multi-Layer Perceptron) 구조를 사용하여 속도와 메모리 효율이 높음.
+  - MLP 구조란, 인접한 층의 모든 뉴런이 서로 연결됨 (Fully Connected Layer) 완전 연결층이며,<br>모든 입력을 여러 층(Layer)의 뉴런(Neuron)을 거치게 하여 비선형적으로 변환하면서 복잡한 함수를 근사하는 구조.
+  - CNN처럼 지역 패턴(이미지 필터링)은 못하지만, 전역적인 관계 학습에 강함
+
+```
+[이미지 입력]
+      ↓
+[Hierarchical Transformer Encoder]
+      ↓
+[Lightweight MLP Decoder]
+      ↓
+[픽셀 단위 클래스 맵 출력]
+```
+
+장점
+- CNN 없이도 SOTA(SOTA=State-of-the-Art) 성능 달성
+- 학습 속도 빠르고 추론 효율이 높음
+- 작은 모델(SegFormer-B0)부터 대형 모델(SegFormer-B5)까지 다양한 크기 제공
+
+활용 분야 예시
+- 자율주행 차량의 도로 객체 인식
+- 위성/항공 이미지 분석
+- 의료 영상(CT, MRI) 장기 분할
+- 로봇 비전
+
+### 허깅페이스(Hugging Face)란?
+- **AI 모델 깃허브라고 할수있다.**
+- 오픈소스 AI 플랫폼이자 머신러닝 커뮤니티로, 특히 **자연어 처리(NLP)**를 비롯한 다양한 AI 모델을 쉽게 사용,공유할 수 있는 환경을 제공합니다.
+- 전 세계 개발자와 연구자들이 만든 사전 학습(Pre-trained) 모델 수십만개를 다운 가능.
+- Transformers 라이브러리 : Hugging Face에서 제공하는 대표 Python 라이브러리.<br>텍스트, 이미지, 음성 모델을 쉽게 불러와서 추론,학습 가능 (PyTorch, TensorFlow, JAX 지원)
+- Datasets 라이브러리 : 대규모 공개 데이터셋을 쉽게 다운로드·전처리할 수 있는 툴.<br>NLP뿐 아니라 이미지, 음성 데이터셋도 포함
+- Trainer API : 초보자도 몇 줄 코드로 모델 fine-tuning 가능하게 지원하는 학습 인터페이스
+
+장점
+- 손쉬운 사전학습 모델 활용: 모델 로드는 한 줄이면 충분. `from transformers import pipeline`
+- 멀티프레임워크 지원: PyTorch, TensorFlow, JAX
+- NLP, CV(컴퓨터 비전), ASR(음성 인식) 등 다양한 도메인을 가짐.
+
 ```
 import torch
 import cv2

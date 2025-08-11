@@ -14,10 +14,10 @@ SegFormer 모델은 런파드에서 실습해볼것.
 - NVIDIA에서 제안한 Transformer 기반의 세그멘테이션(Segmentation) 모델
 - 기존모델은 CNN(Convolutional Neural Network)을 백본으로 사용했지만, SegFormer는 Efficient Self-Attention 기반의 Transformer Encoder를 사용
 - Hierarchical Transformer Encoder : 여러 해상도의 피처맵을 생성해 다단계(Context + Detail) 정보를 통합.
-- 다양한 입력 크기와 해상도에서 강한 성능
+- 다양한 입력 크기와 해상도에서 강한 성능<br>
   - Cityscapes, ADE20K 같은 고해상도 데이터셋에서 좋은 성능을 보임.
   - 모바일/엣지 디바이스에도 적용 가능할 정도로 경량화 가능.
-- Lightweight MLP Decoder : 복잡한 디코더 대신 단순한 MLP(Multi-Layer Perceptron) 구조를 사용하여 속도와 메모리 효율이 높음.
+- Lightweight MLP Decoder : 복잡한 디코더 대신 단순한 MLP(Multi-Layer Perceptron) 구조를 사용하여 속도와 메모리 효율이 높음.<br>
   - MLP 구조란, 인접한 층의 모든 뉴런이 서로 연결됨 (Fully Connected Layer) 완전 연결층이며,<br>모든 입력을 여러 층(Layer)의 뉴런(Neuron)을 거치게 하여 비선형적으로 변환하면서 복잡한 함수를 근사하는 구조.
   - CNN처럼 지역 패턴(이미지 필터링)은 못하지만, 전역적인 관계 학습에 강함
 

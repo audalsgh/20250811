@@ -1,5 +1,7 @@
 # 3일간 Roboflow 차선인식 프로젝트 진행예정
 [Roboflow 프로젝트 계획](https://docs.google.com/document/d/1rxQHvxAIZM0pTspVIDAUx2ZEmjZRNSW-f6OrcitXFqM/edit?tab=t.0)<br>
+[한글 공지](https://docs.google.com/document/d/1IdB_uoR4_1vaJMOJXXIMJWpvcERI0WoAfe2JEaGevwo/edit?tab=t.0)<br>
+
 https://www.ai-studio.co.kr/fo/board/dashboard#init<br>
 추후에 사용할 ai studio 가입하기
 

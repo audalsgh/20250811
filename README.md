@@ -1,9 +1,11 @@
-# 3일간 Roboflow 차선인식 프로젝트 진행예정
+# 0813 화요일부턴 3일간 Roboflow 차선인식 프로젝트 진행예정
 [Roboflow 프로젝트 계획](https://docs.google.com/document/d/1rxQHvxAIZM0pTspVIDAUx2ZEmjZRNSW-f6OrcitXFqM/edit?tab=t.0)<br>
 [한글 공지](https://docs.google.com/document/d/1IdB_uoR4_1vaJMOJXXIMJWpvcERI0WoAfe2JEaGevwo/edit?tab=t.0)<br>
 
 https://www.ai-studio.co.kr/fo/board/dashboard#init<br>
 추후에 사용할 ai studio 가입하기
+
+# 0812 월요일 오늘날짜는 segmentation 공부.
 
 ## 1. YOLOv11 segmentation 사물인식 코드 colab에서 실습
 - YOLOv11 segmentation은 19개 정도의 사물인식이 된다고 알려져있음.<br>
@@ -88,4 +90,3 @@ print(result)
 
 <img width="1728" height="589" alt="image" src="https://github.com/user-attachments/assets/1b9f5853-87cb-4d72-acb5-3243f1065bc4" /><br>
 gpt에게 원래 논리에 부합하는 코랩용 비교코드를 달라고함. 원본코드는 너무 오래걸려서 나중에 해볼것.
-

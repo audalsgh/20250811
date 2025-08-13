@@ -88,6 +88,6 @@ print(result)
 
 -> TensorRT는 실차/엣지에서 추론 전용으로 최적화하는데 쓰임, 모델이 FP16/INT8로 변환되어 FPS↑, 지연↓, 메모리↓
 
-[코랩에서 텐서RT와 파이토치 비교해본 코드]()
+[코랩에서 텐서RT와 파이토치 비교해본 코드](0811_ADAS_PyTorch_TensorRT.ipynb)
 <img width="887" height="780" alt="image" src="https://github.com/user-attachments/assets/73139bd9-199d-44ad-8480-5eec2b1c9435" /><br>
 gpt에게 원래 논리에 부합하는 코랩용 비교코드를 달라고함. 원본코드는 너무 오래걸려서 나중에 해볼것.
